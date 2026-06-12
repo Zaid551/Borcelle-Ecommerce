@@ -1,0 +1,37 @@
+[
+    {
+      "title": "About",
+      "links": [
+        { "name": "About Us", "path": "/about" },
+        { "name": "Find store", "path": "/" },
+        { "name": "Categories", "path": "/products" },
+        { "name": "Blogs", "path": "/blogs" }
+      ]
+    },
+    {
+      "title": "Partnership",
+      "links": [
+        { "name": "Affiliate", "path": "/" },
+        { "name": "Collaborations", "path": "/" },
+        { "name": "Sponsorship", "path": "/" }
+      ]
+    },
+    {
+      "title": "Information",
+      "links": [
+        { "name": "Help Center", "path": "/help" },
+        { "name": "Money Refund", "path": "/refund" },
+        { "name": "Shipping", "path": "/shipping" },
+        { "name": "Contact us", "path": "/help/contact" }
+      ]
+    },
+    {
+      "title": "For users",
+      "links": [
+        { "name": "Login", "path": "/user/login" },
+        { "name": "Register", "path": "/user/signUp" },
+        { "name": "Settings", "path": "/settings" },
+        { "name": "My Orders", "path": "/orders" }
+      ]
+    }
+  ]

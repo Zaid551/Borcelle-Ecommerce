@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "title": "iPhone 17 Pro Max: What to Expect?",
+    "category": "Mobile",
+    "date": "April 10, 2026",
+    "image": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=500",
+    "description": "A deep dive into the latest rumors regarding Apple's upcoming flagship, including the new A19 chip and camera specs."
+  },
+  {
+    "id": 2,
+    "title": "Top 5 Laptops for Developers in 2026",
+    "category": "Laptops",
+    "date": "April 08, 2026",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=500",
+    "description": "Choosing the right machine for coding is crucial. We compare MacBook Pro, Dell XPS, and the latest Framework laptops."
+  },
+  {
+    "id": 3,
+    "title": "Mirrorless vs DSLR: The Ultimate Guide",
+    "category": "Cameras",
+    "date": "April 05, 2026",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=500",
+    "description": "Is it finally time to ditch your DSLR? We analyze the performance of the newest mirrorless systems for professionals."
+  },
+  {
+    "id": 4,
+    "title": "The Rise of Foldable Smartphones",
+    "category": "Mobile",
+    "date": "April 03, 2026",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=500",
+    "description": "Are foldable phones finally becoming mainstream? We review the durability and multitasking features of the latest Samsung and Google Z-series."
+  },
+  {
+    "id": 5,
+    "title": "Why OLED Monitors are Changing Gaming",
+    "category": "Accessories",
+    "date": "April 01, 2026",
+"image": "https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=500",    "description": "Infinite contrast ratios and 0.03ms response times. Discover why every pro gamer is switching to OLED technology this year."
+  },
+  {
+    "id": 6,
+    "title": "Mastering 8K Video with Mirrorless Cameras",
+    "category": "Cameras",
+    "date": "March 28, 2026",
+    "image": "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?q=80&w=500",
+    "description": "Recording in 8K requires more than just a good sensor. Learn about the storage solutions and lenses needed for ultra-high-definition cinema."
+  },
+  {
+    "id": 7,
+    "title": "The Best Noise-Canceling Headphones for Travel",
+    "category": "Audio",
+    "date": "March 25, 2026",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500",
+    "description": "Silence the world. We put Sony, Bose, and Apple to the test in our annual noise-cancellation shootout at 30,000 feet."
+  },
+  {
+    "id": 8,
+    "title": "Desktop Power in a Laptop Frame",
+    "category": "Laptops",
+    "date": "March 22, 2026",
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=500",
+    "description": "A review of the new RTX 50-series mobile GPUs. Can these laptops finally replace your dedicated gaming rig?"
+  },
+  {
+    "id": 9,
+    "title": "Smartwatches: More Than Just Fitness",
+    "category": "Wearables",
+    "date": "March 20, 2026",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=500",
+    "description": "From ECGs to blood glucose monitoring, we explore how the latest wearables are becoming essential tools for modern healthcare."
+  }
+]
