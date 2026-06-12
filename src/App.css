@@ -713,11 +713,11 @@ footer ul li a{
     align-items: center;
     padding: 20px;
 }
-/* التنسيق الأساسي (للديسكتوب) */
+
 .auth-left {
     background-image: url('assets/authBackground.png');
     background-position: center;
-    background-size: cover; /* ضروري عشان الصورة تتمدد صح */
+    background-size: cover; 
     min-height: 100vh;
     position: relative;
 }
@@ -741,27 +741,25 @@ footer ul li a{
     text-align: center;
     min-height: 100vh;
     width: 100%;
-    display: flex; /* أضفت هدول عشان الكلام يتوسطن عمودياً وأفقياً */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-/* التنسيق الخاص بالموبايل (شاشات أصغر من 992px) */
 @media (max-width: 991.98px) {
     .auth-left {
-        min-height: 30vh; /* خليته ياخد 30% من طول الشاشة بس */
-        height: 250px;    /* أو فيك تعطي طول ثابت إذا بتفضل */
+        min-height: 30vh;
+        height: 250px;   
     }
 
     .auth-info {
-        min-height: 30vh; /* لازم نعدلها هون كمان لتناسب الأب */
+        min-height: 30vh; 
         height: 250px;
         padding: 40px 20px;
     }
-    
-    /* إذا كان في نص كبير ممكن نصغره شوي بالموبايل */
+
     .auth-info h1 {
         font-size: 1.5rem;
     }
@@ -1060,7 +1058,7 @@ footer ul li a{
 .check-code {
     gap: 15px;
 }
-/* تعديلات الموبايل */
+
 @media (max-width: 991px) {
     .auth-left {
         min-height: auto !important; 
@@ -1109,7 +1107,6 @@ footer ul li a{
     border-color: #EA088B !important;
 }
 
-/* سحر الموبايل */
 @media (max-width: 768px) {
     .auth-left {
         min-height: auto !important; 

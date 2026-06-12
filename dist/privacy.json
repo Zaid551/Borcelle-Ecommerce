@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Information Collection",
+    "content": "We collect information you provide directly to us, such as when you create an account, make a purchase, or communicate with us. This includes your name, email, and payment details."
+  },
+  {
+    "id": 2,
+    "title": "How We Use Your Information",
+    "content": "Your information is used to process transactions, improve our services, and send you updates about your orders and promotional offers related to Borcelle."
+  },
+  {
+    "id": 3,
+    "title": "Data Security",
+    "content": "We implement a variety of security measures to maintain the safety of your personal information when you place an order or enter, submit, or access your information."
+  },
+  {
+    "id": 4,
+    "title": "Cookies Policy",
+    "content": "Our website uses cookies to enhance your browsing experience. Cookies are small files that a site or its service provider transfers to your computer's hard drive."
+  }
+]
