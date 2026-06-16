@@ -1,22 +1,22 @@
 [
-  { "id": 1, "title": "Arabic Emirates", "img": "/Images/AE@2x.png", "link": "shopname.ae"
+  { "id": 1, "title": "Arabic Emirates", "img": "Images/AE@2x.png", "link": "shopname.ae"
   },
-  { "id": 2, "title": "Australia", "img": "/Images/AU@2x.png", "link": "shopname.ae"
+  { "id": 2, "title": "Australia", "img": "Images/AU@2x.png", "link": "shopname.ae"
   },
-  { "id": 3, "title": "United States", "img": "/Images/US@2x.png", "link": "shopname.ae"
+  { "id": 3, "title": "United States", "img": "Images/US@2x.png", "link": "shopname.ae"
   },
-  { "id": 4, "title": "Russia", "img": "/Images/RU@2x.png", "link": "shopname.ru"
+  { "id": 4, "title": "Russia", "img": "Images/RU@2x.png", "link": "shopname.ru"
   },
-  { "id": 5, "title": "Italy", "img": "/Images/icon.png", "link": "shopname.it"
+  { "id": 5, "title": "Italy", "img": "Images/icon.png", "link": "shopname.it"
   },
-  { "id": 6, "title": "Denmark", "img": "/Images/DK@2x.png", "link": "shopname.dk"
+  { "id": 6, "title": "Denmark", "img": "Images/DK@2x.png", "link": "shopname.dk"
   },
-  { "id": 7, "title": "France", "img": "/Images/FR@2x.png", "link": "shopname.fr"
+  { "id": 7, "title": "France", "img": "Images/FR@2x.png", "link": "shopname.fr"
   },
-  { "id": 8, "title": "Arabic Emirates", "img": "/Images/AE@2x.png", "link": "shopname.ae"
+  { "id": 8, "title": "Arabic Emirates", "img": "Images/AE@2x.png", "link": "shopname.ae"
   },
-  { "id": 9, "title": "China", "img": "/Images/CN@2x.png", "link": "shopname.ae"
+  { "id": 9, "title": "China", "img": "Images/CN@2x.png", "link": "shopname.ae"
   },
-  { "id": 10, "title": "Great Britain", "img": "/Images/GB@2x.png", "link": "shopname.co.uk"
+  { "id": 10, "title": "Great Britain", "img": "Images/GB@2x.png", "link": "shopname.co.uk"
   }
 ]

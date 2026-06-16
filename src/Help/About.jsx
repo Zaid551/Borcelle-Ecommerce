@@ -9,7 +9,7 @@ const About = () => {
   const {userInfo} = useContext(AuthContext)
   const [features, setFeatures] = useState([])
   useEffect(()=>{
-      fetch("/aboutCard.json")
+    fetch(`${import.meta.env.BASE_URL}aboutCard.json`)
     .then((res)=>{
       return res.json()
     })
@@ -53,42 +53,30 @@ const About = () => {
         </Col>
       </Row>
       <Row className="g-4 px-5 pb-5">
-      {features.map((item) => {
-        const IconComponent = Icons[item.iconName];
+        {features.map((item) => {
+          const IconComponent = Icons[item.iconName];
 
-        return (
-          <Col md={4} key={item.id} >
-            <Card className="h-100 border-1 shadow-sm p-4  text-center hover-card transition-all" style={{backgroundColor: "#F9F9F9"}}>
-              <Card.Body>
-                {IconComponent && (<IconComponent size={40} className="pink-color mb-3" />)}
-                <Card.Title className="fw-bold mb-3">{item.title}</Card.Title>
-                <Card.Text className="gray">
-                  {item.text}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        );
-      })}
-    </Row>
-      {/* <Row className="g-5 p-4">
-        {Array.isArray(features) && features.map((item) => {
-          const Icon = Icons[item.iconName]
-          return(
-          <Col md={4} key={item.id} >
-            <Card className="h-100 border-0 shadow-sm p-4  text-center hover-card transition-all" style={{backgroundColor: "#F9F9F9"}}>
-              <Card.Body>
-                {Icon && (<Icon size={40} className="pink-color mb-3" />)}
-                <Card.Title className="fw-bold mb-3">{item.title}</Card.Title>
-                <Card.Text className="gray text-start">
-                  {item.text}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          )
+          return (
+            <Col xs={12} sm={6} md={4} key={item.id} className="mb-4 d-flex">
+              <div className="custom-animated-card w-100">
+                <div className="card-inner-content p-4 text-center">
+                  <div className="d-flex flex-column justify-content-center align-items-center h-100">
+                    {IconComponent && (
+                      <IconComponent size={40} className="pink-color mb-3" />
+                    )}
+                    <h5 className="fw-bold text-dark mb-3">
+                      {item.title}
+                    </h5>
+                    <p className="text-muted gray mb-0">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          );
         })}
-      </Row> */}
+      </Row>
     </div>
   )
 }

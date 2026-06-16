@@ -294,7 +294,7 @@ const handleRemoveAddress = (addressId) => {
   });
 };
   useEffect(()=>{
-    fetch("/settingsLinks.json")
+    fetch(`${import.meta.env.BASE_URL}settingsLinks.json`)
     .then((res)=>{
       return res.json()
     })

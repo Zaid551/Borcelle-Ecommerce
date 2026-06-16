@@ -5,7 +5,7 @@ const Suppliers = () => {
   
   const [flagsItems, setFlagsItems] = useState([])
   useEffect(()=>{
-    fetch("/flags.json")
+    fetch(`${import.meta.env.BASE_URL}flags.json`)
     .then( res => {return res.json()})
     .then( data => setFlagsItems(data))
     .catch( err => console.error("Error loading flags items: ", err))

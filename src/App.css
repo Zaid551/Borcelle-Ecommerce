@@ -485,14 +485,11 @@ form .subForm input{
 .custom-animated-card:hover img {
   transform: scale(1.03);
 }
-@media (max-width:768px){
-    .custom-animated-card{
-        width: calc(50% - 12px);
-        min-width: 160px;
-        transition: background-color 0.3s;
-        cursor: pointer;
-    }
 
+@media (max-width: 768px) {
+  .custom-animated-card {
+    cursor: pointer;
+  }
 }
 .recommend-card p,
 .recommend-card h6{

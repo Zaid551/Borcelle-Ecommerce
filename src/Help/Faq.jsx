@@ -8,7 +8,7 @@ const Faq = () => {
     const {userInfo} = useContext(AuthContext)
     const [faq, setFaq] = useState([])
     useEffect(()=>{
-        fetch("/faq.json")
+      fetch(`${import.meta.env.BASE_URL}faq.json`)
       .then((res)=>{
         return res.json()
       })

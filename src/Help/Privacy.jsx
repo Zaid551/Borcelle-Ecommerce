@@ -7,7 +7,7 @@ const Privacy = () => {
   const {userInfo} = useContext(AuthContext)
     const [policies, setPolicies] = useState([])
       useEffect(()=>{
-          fetch("/privacy.json")
+        fetch(`${import.meta.env.BASE_URL}privacy.json`)
         .then((res)=>{
           return res.json()
         })

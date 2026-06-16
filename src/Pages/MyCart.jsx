@@ -49,7 +49,7 @@ const MyCart = () => {
     // }
   const [paymentWays, setPaymentWays] = useState([])
   useEffect(()=>{
-    fetch("/paymentWay.json")
+    fetch(`${import.meta.env.BASE_URL}paymentWay.json`)
     .then( res => {return res.json()})
     .then( data => setPaymentWays(data))
     .catch( err => console.error("Error loading flags items: ", err))

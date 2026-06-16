@@ -10,7 +10,7 @@ import Subscribe from './Subscribe';
 const MyWebsiteFooter = ({showSubscribe = true, showBanner = true}) => {
   const [footerSections, setFooterSections] = useState([]) 
   useEffect(()=>{
-      fetch("/footerSection.json")
+    fetch(`${import.meta.env.BASE_URL}footerSection.json`)
     .then((res)=>{
       return res.json()
     })
@@ -85,7 +85,7 @@ const MyWebsiteFooter = ({showSubscribe = true, showBanner = true}) => {
               </Col>
               {footerSections.map((section, idx) => (
                 <Col md="2" key={idx} className='mb-3'> 
-                  <h6 className='fw-bold text-dark mb-3'>{section.title}</h6> 
+                  <h6 className='fw-bold text-dark mb-3'>{section.title}</h6>
                   <ul className="nav flex-column"> 
                     {section.links.map((link, lIdx) => (
                       <li key={lIdx} className="nav-item mb-2">

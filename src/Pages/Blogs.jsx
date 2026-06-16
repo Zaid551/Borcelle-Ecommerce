@@ -16,7 +16,7 @@ const Blogs = () => {
     },[])
     const [blogs, setBlogs] = useState([])
     useEffect(()=>{
-        fetch("/blogs.json")
+      fetch(`${import.meta.env.BASE_URL}blogs.json`)
       .then((res)=>{
         return res.json()
       })

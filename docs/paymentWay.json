@@ -1,7 +1,7 @@
 [
-  {"id": 1, "image": "/Images/americanLogo.png", "title" : "American Express Logo"},
-  {"id": 2, "image": "/Images/paymentLogo2.png", "title" : "Payment Logo"},
-  {"id": 3, "image": "/Images/paypalLogo.png", "title" : "Paypal Logo"},
-  {"id": 4, "image": "/Images/visaLogo.png", "title" : "Visa Logo"},
-  {"id": 5, "image": "/Images/applePaylogo.png", "title" : "Apple Logo"}
+  {"id": 1, "image": "Images/americanLogo.png", "title" : "American Express Logo"},
+  {"id": 2, "image": "Images/paymentLogo2.png", "title" : "Payment Logo"},
+  {"id": 3, "image": "Images/paypalLogo.png", "title" : "Paypal Logo"},
+  {"id": 4, "image": "Images/visaLogo.png", "title" : "Visa Logo"},
+  {"id": 5, "image": "Images/applePaylogo.png", "title" : "Apple Logo"}
 ]
