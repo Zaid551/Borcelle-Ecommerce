@@ -21,6 +21,10 @@ const MyWebsiteNavbar = ({showContent = true}) => {
 
   const handleCartClose = () => setShowCart(false);
   const handleCartShow = () => setShowCart(true);
+  const [showList, setShowList] = useState(false);
+
+  const handleListClose = () => setShowList(false);
+  const handleListShow = () => setShowList(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 992)
   useEffect(()=>{
     const handleResize = () => setIsMobile(window.innerWidth < 992)
@@ -39,7 +43,7 @@ const MyWebsiteNavbar = ({showContent = true}) => {
       <Navbar expand="lg" className="bg-white sticky-top py-2">
         <Container>
 
-          <Navbar.Toggle aria-controls="offcanvasNavbar" className='border-0 shadow-none p-0 me-2'>
+          <Navbar.Toggle aria-controls="offcanvasNavbar" className='border-0 shadow-none p-0 me-2' onClick={handleListShow}>
             <List className='fs-1 text-dark' />
           </Navbar.Toggle>
 
@@ -47,7 +51,7 @@ const MyWebsiteNavbar = ({showContent = true}) => {
             <img src={logo} alt="Logo" style={{width:"100%", height: '100%', objectFit: "contain" }} />
           </Navbar.Brand>
 
-          <Navbar.Offcanvas id="offcanvasNavbar" placement="start">
+          <Navbar.Offcanvas show={showList} onHide={handleListClose} id="offcanvasNavbar" placement="start">
             <Offcanvas.Body className="p-0">
               {!isMobile && (
               showContent &&
@@ -74,11 +78,11 @@ const MyWebsiteNavbar = ({showContent = true}) => {
                         className="rounded-circle"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', border: '2px solid #e91e63' }}/>
                       </div>
-                      <Navbar.Toggle aria-controls="offcanvasNavbar" className="border-0 shadow-none p-1 btn-close-custom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x-lg text-dark fw-bold" viewBox="0 0 16 16">
+                      <Button variant="link" className="border-0 shadow-none p-1 text-dark" onClick={handleListClose}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x-lg fw-bold" viewBox="0 0 16 16">
                           <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
                         </svg>
-                      </Navbar.Toggle>
+                      </Button>
                     </div>
                     {!userInfo 
                     ? (<div className="fs-6">
@@ -89,7 +93,7 @@ const MyWebsiteNavbar = ({showContent = true}) => {
                     :( <div>{userInfo?.data?.name}</div>)}
                     
                   </div>
-                  <Nav className="flex-column align-items-start p-2 border-bottom">
+                  <Nav className="flex-column align-items-start p-2 border-bottom" onSelect={handleListClose}>
                     <Nav.Link as={NavLink} to="/" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
                       <HouseDoor size={20} className="text-muted" />
                       <span>Home</span>
@@ -108,7 +112,7 @@ const MyWebsiteNavbar = ({showContent = true}) => {
                     </Nav.Link>
                   </Nav>
 
-                  <Nav className="flex-column  align-items-start p-2 border-bottom">
+                  <Nav className="flex-column  align-items-start p-2 border-bottom" onSelect={handleListClose}>
                     <Nav.Link as={NavLink} to="/help/faq" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
                       <QuestionCircle size={18} className="text-muted"/>
                       <span>faq</span>
@@ -121,13 +125,13 @@ const MyWebsiteNavbar = ({showContent = true}) => {
                       <People size={18} className="text-muted" />
                       <span>About</span>
                     </Nav.Link>
-                    <Nav.Link as={NavLink} to="/about" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
+                    <Nav.Link as={NavLink} to="/blogs" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
                       <Book size={18} className="text-muted" />
                       <span>Blogs</span>
                     </Nav.Link>
                   </Nav>
 
-                  <Nav className="flex-column  align-items-start p-2">
+                  <Nav className="flex-column  align-items-start p-2" onSelect={handleListClose}>
                     <Nav.Link as={NavLink} to="/admin" className="py-2 px-3 text-dark small opacity-75">Dashboard</Nav.Link>
                     <Nav.Link as={NavLink} to="/help/terms" className="py-2 px-3 text-dark small opacity-75">Terms & Conditions</Nav.Link>
                     <Nav.Link as={NavLink} to="/help/privacy" className="py-2 px-3 text-dark small opacity-75">Privacy policy</Nav.Link>
