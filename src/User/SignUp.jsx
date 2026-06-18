@@ -62,7 +62,7 @@ const handleImageChange = (e) => {
     if (preview) URL.revokeObjectURL(preview);
 };
     return (
-        <div className='auth-info d-flex flex-column justify-content-center align-items-start px-5 mt-3'>
+        <div style={{marginBlockStart: "180px"}} className='auth-info d-flex flex-column justify-content-center align-items-start px-5'>
             <h5 className='text-dark font-setting fw-medium mb-3'>Fill your information</h5>
             <p className='gray-900 font-setting fw-regular'>Enter your details</p>
             <Form onSubmit={handleRegisterSubmit}  className='w-100 my-3'>

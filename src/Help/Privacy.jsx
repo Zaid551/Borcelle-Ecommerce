@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Breadcrumb } from 'react-bootstrap'
 import { AuthContext } from '../Contexts/AuthContext'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const Privacy = () => {
   const {userInfo} = useContext(AuthContext)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Breadcrumb } from 'react-bootstrap';
 import WishlistContent from '../Components/WishlistContent';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Wishlist = () => {
 

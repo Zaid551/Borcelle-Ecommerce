@@ -97,14 +97,14 @@ const Verify = () => {
         callResendAPI()
     }
     const renderButton = (buttonProps) => {
-        return <button {...buttonProps} style={{fontSize: "22px", background: 'transparent'}} className='pink-color border-0'>Resend Code</button>;
+        return <button {...buttonProps} style={{fontSize: "22px", background: 'transparent'}} className='pink-color border-0 resend'>Resend Code</button>;
     };
     const renderTime = (remainingTime) => {
-        return <div className='pink-color' style={{fontSize: "22px"}}> <span className='font-setting fw-medium' style={{color: "#C0C0C0"}}>Didn’t receive code ?</span> 00:{remainingTime}</div>;
+        return <div className='pink-color' style={{fontSize: "22px"}}> <span className='font-setting fw-medium resend' style={{color: "#C0C0C0"}}>Didn’t receive code ?</span> 00:{remainingTime}</div>;
     };
     if(!tempUser) return null
         return (
-        <div className='auth-info d-flex flex-column justify-content-center align-items-start px-5 mt-3'>
+        <div style={{marginBlockStart: "120px"}} className='auth-info d-flex flex-column justify-content-center align-items-start px-5'>
             <h5 className='text-dark font-setting fw-medium mb-3'>Verification</h5>
             <p className='font-setting fw-regular' style={{color: "#333333"}}>Enter the code we send to :  {tempUser}</p>
             <Form 

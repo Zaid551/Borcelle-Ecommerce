@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { ArrowLeft, ArrowRight } from 'react-bootstrap-icons';
 import { CheckLg } from 'react-bootstrap-icons';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

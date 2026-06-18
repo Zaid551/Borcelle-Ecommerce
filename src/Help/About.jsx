@@ -3,7 +3,7 @@ import {  Row, Col, Card, Breadcrumb } from 'react-bootstrap';
 import * as Icons from 'react-bootstrap-icons';
 import { aboutImage } from '../Utility/ImagesPlace';
 import { AuthContext } from '../Contexts/AuthContext';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const {userInfo} = useContext(AuthContext)

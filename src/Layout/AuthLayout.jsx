@@ -22,110 +22,62 @@ const AuthLayout = ({children}) => {
                 ? (<div className='form-payment text-start w-100 px-lg-5 px-3 py-4' >
                     <h3 className='font-setting' style={{fontSize: "22px"}}>Payment Method</h3>
                     <p className='font-setting' style={{fontSize: "18px"}}>Pick your payment method </p>
-                    {/* <Form >
-                      <Form.Group  className='d-flex justify-content-between align-items-center flex-nowrap p-3'>
-                        <Form.Label htmlFor='way-1'>Cash</Form.Label>
-                        <Form.Check
-                          type="radio"
-                          name="paymentWays" 
-                          id="way-1"
-                          value="1"
-                        />
-                      </Form.Group>
-                      <Form.Group  className='d-flex justify-content-between align-items-center flex-nowrap p-3'>
-                        <Form.Label htmlFor='way-2'><img src='/public/Images/Ellipse 11.svg'  alt='Syriatel'/> Syriatel </Form.Label>
-                        <Form.Check  
-                          type="radio"
-                          name="paymentWays" 
-                          id="way-2"
-                          value="2"
-                          
-                        />
-                      </Form.Group>
-                      <Form.Group  className='d-flex justify-content-between align-items-center flex-nowrap p-3'>
-                        <Form.Label htmlFor='way-3'><img src='/public/Images/Ellipse 13.svg'  alt='MTN' className='border-0'/> MTN</Form.Label>
-                        <Form.Check
-                          type="radio"
-                          name="paymentWays" 
-                          id="way-3"
-                          value="3"
-                        />
-                      </Form.Group>
-                      <Form.Group className='check-code d-flex justify-content-between align-items-center'>
-                        <div className='d-flex flex-column'>
-                          <Form.Label htmlFor='discountCode'>Discount Code</Form.Label>
+                    <Form>
+                      <div className="payment-grid mb-3">
+                        {[
+                          { id: 'way-1', label: 'Cash', icon: null },
+                          { id: 'way-2', label: 'Syriatel', icon: '/public/Images/Ellipse 11.svg' },
+                          { id: 'way-3', label: 'MTN', icon: '/public/Images/Ellipse 13.svg' }
+                        ].map((item, index) => (
+                          <Form.Group key={item.id} className='payment-box d-flex align-items-center justify-content-between p-2 mb-2 rounded-2'>
+                            <Form.Label htmlFor={item.id} className="d-flex align-items-center gap-2 mb-0 text-white cursor-pointer flex-grow-1">
+                              {item.icon && <img src={item.icon} alt={item.label} style={{ width: '20px' }} />}
+                              <span style={{ fontSize: '18px' }}>{item.label}</span>
+                            </Form.Label>
+                            <Form.Check
+                              type="radio"
+                              name="paymentWays"
+                              id={item.id}
+                              value={index + 1}
+                              className="custom-radio"
+                            />
+                          </Form.Group>
+                        ))}
+                      </div>
+
+                      <div className='discount-mini-box p-2 rounded-2 bg-transparent d-flex align-items-center'>
+                        <div className="flex-grow-1">
                           <Form.Control
                             type='text'
                             id='discountCode'
-                            placeholder='c2026'
-                            style={{boxShadow: "none"}}
-                            className='border-0'
+                            placeholder='Discount Code'
+                            className='border-0 shadow-none py-2 '
+                            style={{ fontSize: '13px' }}
                             value={couponCode}
                             onChange={(e) => setCouponCode(e.target.value)}
                           />
                         </div>
-                        <Button onClick={applyCoupon} className='bg-white pink-color border-0 pe-5 btn-check-hover'
-                          style={{marginBlockStart: "34px"}}><ArrowCounterclockwise/> Check
+                        <Button onClick={applyCoupon} className='bg-white pink-color border-0 py-1 px-3 ms-2  btn-check-hover'
+                          ><ArrowCounterclockwise/> Check
                         </Button>
-                      </Form.Group>
-                    </Form> */}
-                    <Form>
-    {/* خيارات الدفع: رتبناها بصناديق صغيرة مرنة */}
-    <div className="payment-grid mb-3">
-      {[
-        { id: 'way-1', label: 'Cash', icon: null },
-        { id: 'way-2', label: 'Syriatel', icon: '/public/Images/Ellipse 11.svg' },
-        { id: 'way-3', label: 'MTN', icon: '/public/Images/Ellipse 13.svg' }
-      ].map((item, index) => (
-        <Form.Group key={item.id} className='payment-box d-flex align-items-center justify-content-between p-2 mb-2 rounded-2'>
-          <Form.Label htmlFor={item.id} className="d-flex align-items-center gap-2 mb-0 text-white cursor-pointer flex-grow-1">
-            {item.icon && <img src={item.icon} alt={item.label} style={{ width: '20px' }} />}
-            <span style={{ fontSize: '18px' }}>{item.label}</span>
-          </Form.Label>
-          <Form.Check
-            type="radio"
-            name="paymentWays"
-            id={item.id}
-            value={index + 1}
-            className="custom-radio"
-          />
-        </Form.Group>
-      ))}
-    </div>
-
-    <div className='discount-mini-box p-2 rounded-2 bg-transparent d-flex align-items-center'>
-      <div className="flex-grow-1">
-        <Form.Control
-          type='text'
-          id='discountCode'
-          placeholder='Discount Code'
-          className='border-0 shadow-none py-2 '
-          style={{ fontSize: '13px' }}
-          value={couponCode}
-          onChange={(e) => setCouponCode(e.target.value)}
-        />
-      </div>
-      <Button onClick={applyCoupon} className='bg-white pink-color border-0 py-1 px-3 ms-2  btn-check-hover'
-        ><ArrowCounterclockwise/> Check
-      </Button>
-    </div>
-    
-  </Form>
+                      </div>
+                      
+                    </Form>
                   </div>)
                 : (<>
-                  <img src={whiteLogo} alt="Borcelle Online Store" />
+                  <img src={whiteLogo} alt="Borcelle Online Store" className='auth-image' />
                   <div className='auth-text'>
-                    <h1 className='font-setting'>Let’s get started</h1>
+                    <h1 className='font-setting '>Let’s get started</h1>
                     <p className='font-setting'>Where opportunities meet simplicity!<br/>
-                        Whether you’re here to fill out your
-                        <br/>cart <br/>
+                        Whether you’re here to fill out your 
+                        <br className='d-none d-lg-block'/> cart <br />
                         or to check irresistible offers.
                     </p>
                   </div>
                 </>)}
               </div>
             </Col>
-            <Col lg="6" className='auth-right bg-light'>
+            <Col lg="6" className='auth-right bg-light mt-lg-0 mt-5'>
               {children}
             </Col>
           </Row>

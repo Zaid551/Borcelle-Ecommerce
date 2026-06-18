@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Contexts/AuthContext";
 import { Breadcrumb, Row, Col } from "react-bootstrap";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Terms = () => {
   const {userInfo} = useContext(AuthContext)

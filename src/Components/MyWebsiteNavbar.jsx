@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {BoxSeam, Cart, CartFill, ChatLeftTextFill, Headphones, Heart, HeartFill, HouseDoor, HouseFill, List, People, PersonAdd, PersonFill, QuestionCircle, Trash3Fill } from 'react-bootstrap-icons';
+import {Book, Box, Box2, Box2Fill, BoxSeam, Cart, CartFill, ChatLeftTextFill, ExclamationCircle, Headphones, Heart, HeartFill, HouseDoor, HouseFill, List, People, PersonAdd, PersonFill, QuestionCircle, Trash3Fill } from 'react-bootstrap-icons';
 import { logo } from '../Utility/ImagesPlace';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Contexts/AuthContext';
@@ -13,7 +13,6 @@ import { WishlistContext } from '../Contexts/WishlistContext';
 import { SearchBar } from './SearchBar';
 import SearchList from './SearchList';
 
-// const MyWebsiteNavbar = ({showContent = true,cartItems = []}) => {
 const MyWebsiteNavbar = ({showContent = true}) => {
   const defaultAvatar = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
   const { cartItems, subTotal, handleRemoveItem, handleQtyChange } = useCart(); 
@@ -68,19 +67,27 @@ const MyWebsiteNavbar = ({showContent = true}) => {
               {isMobile && (
                 <>
                   <div className="bg-light p-4 border-bottom">
-                    <div className="d-flex align-items-center mb-2">
+                    <div className="d-flex align-items-center justify-content-between mb-2">
                       <div className="rounded-circle bg-secondary d-flex align-items-center justify-content-center" style={{ width: '50px', height: '50px' }}>
                         <img src={userInfo?.data?.image || defaultAvatar}
                         alt="Profile"
                         className="rounded-circle"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', border: '2px solid #e91e63' }}/>
                       </div>
+                      <Navbar.Toggle aria-controls="offcanvasNavbar" className="border-0 shadow-none p-1 btn-close-custom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x-lg text-dark fw-bold" viewBox="0 0 16 16">
+                          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                      </Navbar.Toggle>
                     </div>
-                    <div className="fs-6">
+                    {!userInfo 
+                    ? (<div className="fs-6">
                       <NavLink to="/user/login" className="text-dark text-decoration-none fw-bold">Sign in</NavLink>
                       <span className="mx-2 text-muted">|</span>
                       <NavLink to="/user/signUp" className="text-dark text-decoration-none fw-bold">Register</NavLink>
-                    </div>
+                    </div>)
+                    :( <div>{userInfo?.data?.name}</div>)}
+                    
                   </div>
                   <Nav className="flex-column align-items-start p-2 border-bottom">
                     <Nav.Link as={NavLink} to="/" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
@@ -88,8 +95,8 @@ const MyWebsiteNavbar = ({showContent = true}) => {
                       <span>Home</span>
                     </Nav.Link>
                     <Nav.Link as={NavLink} to="/products" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
-                      <List size={20} className="text-muted" />
-                      <span>Categories</span>
+                      <Box size={20} className="text-muted" />
+                      <span>Products</span>
                     </Nav.Link>
                     <Nav.Link as={NavLink} to="/wishlist" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
                       <Heart size={20} className="text-muted" />
@@ -113,6 +120,10 @@ const MyWebsiteNavbar = ({showContent = true}) => {
                     <Nav.Link as={NavLink} to="/about" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
                       <People size={18} className="text-muted" />
                       <span>About</span>
+                    </Nav.Link>
+                    <Nav.Link as={NavLink} to="/about" className="d-flex align-items-center gap-3 py-2 px-3 text-dark">
+                      <Book size={18} className="text-muted" />
+                      <span>Blogs</span>
                     </Nav.Link>
                   </Nav>
 

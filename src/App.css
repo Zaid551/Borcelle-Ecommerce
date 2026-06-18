@@ -300,27 +300,26 @@ footer .nav{
   transform: translateY(-3px) scale(1.2);
   color: var(--pink-color) !important;
 }
-/* التصميم الأساسي: غامق وعصري */
 .app-button-modern {
   display: flex;
   align-items: center;
   padding: 8px 15px;
-  background-color: #111; /* أسود شيك */
+  background-color: #111; 
   color: #fff !important;
   border-radius: 8px;
   text-decoration: none;
   border: 1px solid #111;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  min-width: 160px; /* ضمان عدم صغر الحجم */
+  min-width: 160px;
 }
 
-/* تأثير الـ Hover: يقلب الألوان */
+
 .app-button-modern:hover {
   background-color: #fff;
   color: #111 !important;
   border-color: #111;
-  transform: translateY(-3px); /* رفعة بسيطة */
+  transform: translateY(-3px); 
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
@@ -333,7 +332,6 @@ footer .nav{
   font-size: 14px;
 }
 
-/* حركة إضافية للأيقونة عند الـ Hover */
 .app-button-modern:hover svg {
   transform: scale(1.1);
   transition: transform 0.3s ease;
@@ -391,6 +389,20 @@ form .subForm input{
         height: 155px;
         min-height: 200px;
         padding: 30px;
+    }
+    .auth-image{
+        width: 90px;
+        height: 90px;
+    }
+    .auth-text h1{
+        font-size: 20px !important;
+    }
+    .auth-text p{
+        font-size: 14px !important;
+    }
+    .auth-right .auth-info p,
+    .auth-right .auth-info h5{
+        font-size: 18px !important;
     }
 }
 .quote::before{
@@ -748,9 +760,8 @@ footer ul li a{
 @media (max-width: 991.98px) {
     .auth-left {
         min-height: 30vh;
-        height: 250px;   
+        height: 250px;
     }
-
     .auth-info {
         min-height: 30vh; 
         height: 250px;
@@ -1110,7 +1121,9 @@ footer ul li a{
         padding-top: 15px !important;
         padding-bottom: 15px !important;
     }
-
+    .auth-info .resend{
+        font-size: 16px !important;
+    }
     .form-payment {
         padding-inline: 20px !important;
     }

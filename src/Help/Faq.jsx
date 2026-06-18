@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Accordion, Col, Row, Breadcrumb } from 'react-bootstrap'
 import { faqImg } from '../Utility/ImagesPlace'
 import { AuthContext } from '../Contexts/AuthContext'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const Faq = () => {
     const {userInfo} = useContext(AuthContext)

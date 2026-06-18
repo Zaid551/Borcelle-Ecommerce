@@ -4,7 +4,7 @@ import { ChatSquareText, Envelope, PersonCircle, ExclamationCircle, ChatLeftDots
 import { AuthContext } from '../Contexts/AuthContext';
 import DynamicModal from '../Components/DynamicModal';
 import { AuthServices } from '../Services/Auth';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const { userInfo } = useContext(AuthContext);
