@@ -1,5 +1,5 @@
 import React from 'react'
-import { whiteLogo } from '../Utility/ImagesPlace'
+import { mtnIcon, syriatelIcon, whiteLogo } from '../Utility/ImagesPlace'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { useLocation } from 'react-router'
 import { ArrowCounterclockwise } from 'react-bootstrap-icons'
@@ -26,8 +26,8 @@ const AuthLayout = ({children}) => {
                       <div className="payment-grid mb-3">
                         {[
                           { id: 'way-1', label: 'Cash', icon: null },
-                          { id: 'way-2', label: 'Syriatel', icon: '/public/Images/Ellipse 11.svg' },
-                          { id: 'way-3', label: 'MTN', icon: '/public/Images/Ellipse 13.svg' }
+                          { id: 'way-2', label: 'Syriatel', icon: syriatelIcon },
+                          { id: 'way-3', label: 'MTN', icon: mtnIcon }
                         ].map((item, index) => (
                           <Form.Group key={item.id} className='payment-box d-flex align-items-center justify-content-between p-2 mb-2 rounded-2'>
                             <Form.Label htmlFor={item.id} className="d-flex align-items-center gap-2 mb-0 text-white cursor-pointer flex-grow-1">

@@ -19,6 +19,8 @@ import logo from '../assets/Black_and_Red_Online_Store_Logo.png'
 import whiteLogo from '../assets/Simplification.png'
 import aboutImage from '../assets/aboutImg.png'
 import faqImg from '../assets/faqImage.png'
+import syriatelIcon from '../assets/Ellipse 11.svg';
+import mtnIcon from '../assets/Ellipse 13.svg';
 export {
     logo,
     whiteLogo,
@@ -40,5 +42,7 @@ export {
     germany,
     england,
     aboutImage,
-    faqImg
+    faqImg,
+    syriatelIcon,
+    mtnIcon
 };

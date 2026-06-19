@@ -46,7 +46,7 @@ const SecondaryNavbar = () => {
                 <div className='d-flex justify-content-between align-item-center'>
                   <Nav className='nav-link d-flex justify-content-start align-item-center flex-grow-1 fw-medium pe-3 gap-2'>
                     <Nav.Link as={NavLink} className='nav-item secondary-nav flex-row fs-6' to="/products" >
-                      <List className="me-1"/> Products
+                      Products
                     </Nav.Link>
                     <Nav.Link as={NavLink} className='nav-item fs-6 secondary-nav' to="/about">
                       About Us
