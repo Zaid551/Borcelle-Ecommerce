@@ -6,7 +6,7 @@ import { FreeMode } from 'swiper/modules';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { Link } from 'react-router-dom'; 
-import Blog from '../Components/blog';
+import Blog from '../Components/Blog';
 import RecommendedItems from '../Pages/Home/RecommendedItems'
 
 const Blogs = () => {
@@ -232,51 +232,6 @@ const Blogs = () => {
                   <Row className="g-4 mb-3 justify-content-between align-items-stretch">
                     <Blog viewMode={viewMode} data={blogs} />
                   </Row>
-                </Col>
-              </Row>
-
-              <Row className='bg-white border-top border-bottom mb-3 py-2 px-1 mx-0'>
-                <Col xs={12} className="px-0">
-                  <div className="d-flex align-items-center justify-content-between flex-nowrap gap-1">
-                    
-                    <div className="flex-grow-1 flex-shrink-1" style={{ minWidth: '120px', maxWidth: '160px' }}>
-                      <Form className="d-flex justify-content-center align-items-center border border-1 rounded-2 text-dark bg-white">
-                        <Form.Select size="sm" className="border-0 shadow-none bg-transparent ps-2 pe-0 py-2" style={{ fontSize: '13px' }}>
-                          <option>Sort: Newest</option>
-                          <option value="price-low">Price: Low</option>
-                          <option value="price-high">Price: High</option>
-                          <option value="newest">Newest</option>
-                        </Form.Select>
-                        <FilterLeft size={16} className='text-secondary pe-1' /> 
-                      </Form>
-                    </div>
-                    <div className="d-flex align-items-center flex-nowrap gap-1 flex-shrink-0">
-                      <div 
-                        className="d-flex justify-content-between align-items-center border border-1 rounded-2 px-2 text-center text-dark bg-white" 
-                        style={{ cursor: 'pointer', height: '36px', minWidth: '80px', fontSize: '13px' }}
-                      >
-                        Filter(0) <Filter size={16} className='text-secondary ms-1' /> 
-                      </div>
-
-                      <ButtonGroup size="sm" className="border rounded shadow-sm bg-white" style={{ height: '36px' }}>
-                        <Button 
-                          variant={viewMode === 'grid' ? 'light' : 'white'}
-                          onClick={() => handleViewChange('grid')}
-                          className="border-end px-2 d-flex align-items-center"
-                          style={{ backgroundColor: viewMode === 'grid' ? '#d3d6db' : '#FFFFFF' }}>  
-                          <Grid3x3GapFill className="text-dark" size={15} />
-                        </Button>
-                        <Button 
-                          variant={viewMode === 'list' ? 'light' : 'white'}
-                          onClick={() => handleViewChange('list')}
-                          className="px-2 d-flex align-items-center"
-                          style={{ backgroundColor: viewMode === 'list' ? '#d3d6db' : '#FFFFFF' }}>  
-                          <ListUl className="text-dark" size={15} />
-                        </Button>
-                      </ButtonGroup>
-                    </div>
-
-                  </div>
                 </Col>
               </Row>
             </Container>
